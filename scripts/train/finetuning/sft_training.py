@@ -18,17 +18,17 @@ from transformers import (
 from trl import SFTTrainer
 
 # The model that you want to train from the Hugging Face hub
-model_name = "abhinand/tamil-llama-7b-base-v0.1"
+model_name = "sha1779/RoyalGPT-7b-v1"
 
 # The instruction dataset to use
-dataset_name = "abhinand/tamil-alpaca-orca"
+dataset_name = "sha1779/bangla_instruct_data252K"
 
 instruction_column = "text"
 
 # Fine-tuned model name
-new_model = "abhinand/tamil-llama-7b-instruct-v0.1"
+new_model = "sha1779/RoyalGPT-ft-7b-v1"
 
-use_flash_attention_2 = False
+use_flash_attention_2 = True
 
 ################################################################################
 # QLoRA parameters
@@ -78,7 +78,7 @@ use_nested_quant = False
 output_dir = "./results"
 
 # Number of training epochs
-num_train_epochs = 2
+num_train_epochs = 1
 
 # Enable fp16/bf16 training (set bf16 to True with an A100)
 fp16 = True
